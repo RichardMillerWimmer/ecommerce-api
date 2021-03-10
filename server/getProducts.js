@@ -12,7 +12,7 @@ const getProducts = (req, res) => {
 
     if (req.query.price) {
         const productsByPrice = products.filter(product => product.price >= +req.query.price)
-        console.log(productsByPrice)
+        // console.log(productsByPrice)
         return res.status(200).send(productsByPrice)
     }
     res.status(200).send(products)
